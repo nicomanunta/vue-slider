@@ -61,7 +61,7 @@ createApp({
     },
     methods:{
         nextBtn(){
-            if(this.activeImage == this.slides[this.activeImage].image.length - 1){
+            if(this.activeImage == this.slides.length - 1){
                 this.activeImage = 0
             }else{
                 this.activeImage++
@@ -69,7 +69,7 @@ createApp({
         },
         prevBtn(){
             if(this.activeImage == 0){
-                this.activeImage == this.slides[this.activeImage].image.length - 1
+                this.activeImage = this.slides.length - 1
             }else{
                 this.activeImage--
             }
