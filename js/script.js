@@ -73,6 +73,9 @@ createApp({
             }else{
                 this.activeImage--
             }
+        },
+        selectThumbImg(index){
+            this.activeImage = index
         }
     }
     
