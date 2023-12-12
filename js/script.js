@@ -76,6 +76,12 @@ createApp({
         },
         selectThumbImg(index){
             this.activeImage = index
+        },
+        startScroll(){
+            setInterval(()=>{
+                this.nextBtn()
+            }, 3000)
+
         }
     }
     
