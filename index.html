@@ -21,15 +21,15 @@
                         <img :src="`./${slides[activeImage].image}`" alt="" />
                         <div class="text">
                             <h3>{{slides[activeImage].title}}</h3>
-                            <p>
-                                {{slides[activeImage].text}}
-                            </p>
+                            <p>{{slides[activeImage].text}}</p>
                         </div>
                     </div>
                     <div class="thumbs">
                         <div class="prev" @click="prevBtn"></div>
                         <div class="next" @click="nextBtn"></div>
-                        <div class="thumb active" v-for="thumb, index in slides">
+                        <div class="thumb"
+                        v-for="thumb, index in slides"
+                        :class="activeImage === index ? `active` : ``">
                             <img :src="thumb.image" alt="" />
                         </div>
                     </div>
