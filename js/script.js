@@ -61,10 +61,17 @@ createApp({
     },
     methods:{
         nextBtn(){
-            if(this.activeImage == this.slides[this.activeImage].image.length){
+            if(this.activeImage == this.slides[this.activeImage].image.length - 1){
                 this.activeImage = 0
             }else{
                 this.activeImage++
+            }
+        },
+        prevBtn(){
+            if(this.activeImage == 0){
+                this.activeImage == this.slides[this.activeImage].image.length - 1
+            }else{
+                this.activeImage--
             }
         }
     }
