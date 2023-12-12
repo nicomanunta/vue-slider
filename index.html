@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="col-12">
                     
-                    <div class="item">
+                    <div class="item" @mouseover="stopScroll" @mouseleave="startScroll">
                         <img :src="`./${slides[activeImage].image}`" alt="" />
                         <div class="text">
                             <h3>{{slides[activeImage].title}}</h3>

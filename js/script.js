@@ -29,6 +29,7 @@ let {createApp} = Vue
 createApp({
     data(){
         return{
+            scroll: "",
             activeImage: 0,
             slides: [
                 {
@@ -78,10 +79,13 @@ createApp({
             this.activeImage = index
         },
         startScroll(){
-            setInterval(()=>{
+            this.scroll = setInterval(()=>{
                 this.nextBtn()
             }, 3000)
 
+        },
+        stopScroll(){
+            clearInterval(this.scroll)
         }
     }
     
